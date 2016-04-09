@@ -39,5 +39,5 @@ data <- mutate(data,activity=ifelse(activity==1,"WALKING",ifelse(activity==2,"WA
 ## Averaging each variable for each activity and each subject
 second_tidy_data <- data %>% group_by(subject,activity) %>% summarise_each(funs(mean))
 
-write.table(second_tidy_data, "secont_tidy_data.txt") 
+write.table(second_tidy_data, "secont_tidy_data.txt",row.name =FALSE) 
 }
